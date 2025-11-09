@@ -1,0 +1,32 @@
+Buscar pelo locator:
+//await page.locator('#name').fill('Fernando Veloso de Oliveira')
+
+Buscar pelo elemento:
+// MODELO = wait page.locator('elemento[propriedade=valor]').fill('Fernando Veloso de Oliveira)
+//await page.locator('input[name=name]').fill('Fernando Veloso de Oliveira')
+
+// Para seletores com espaços naturais se faz necessário o uso de string, aspas duplas.
+//await page.locator('input[placeholder="Seu nome completo"]').fill('Fernando Veloso de Oliveira')
+// Caso queira usar aspas simples. Não recomendado.
+//await page.locator('input[placeholder=\'Seu nome completo\']').fill('Fernando Veloso de Oliveira')
+
+// Para usar direto pelo placeholder
+// await page.getByPlaceholder('Seu nome completo').fill('Fernando Veloso de Oliveira')
+
+Clicar em botões:
+
+//await page.click('ADICIONAR XPATH DENTRO')
+//await page.getByText('TEXTO DO BOTÃO').click()
+
+Truque para pegar um texto no toast:
+
+//await page.getByText('seus dados conosco').click()
+//const content = await page.content()
+//console.log(content)
+
+Timeout na tela:
+
+//await page.waitForTimeout(5000)
+
+Verificar se um elemento está escondido, definindo um timout limite para ele ficar invísivel:
+//await expect(page.locator('.toast')).toBeHidden({timeout: 5000})
