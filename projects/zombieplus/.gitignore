@@ -6,8 +6,4 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-node_modules/
-.env
-.vscode/
-.DS_Store
 
