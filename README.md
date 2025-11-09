@@ -1,14 +1,21 @@
 # 🧟‍♂️ Zombie+
 
 Mais que um streaming, uma **experiência arrepiante!**  
-O **Zombie+** é uma aplicação full stack inspirada em serviços de streaming, desenvolvida para fins de estudo e automação de testes.  
-O projeto utiliza **Node.js**, **PostgreSQL**, **Docker**, **PgAdmin** e **Playwright** para garantir uma estrutura sólida, moderna e automatizada.
+O **Zombie+** é uma aplicação full stack inspirada em serviços de streaming, desenvolvida com foco em **automação de testes ponta a ponta** utilizando o **Playwright**.  
+
+O projeto foi criado para demonstrar **boas práticas de testes automatizados**, explorando cenários reais de interação com a interface, validação de dados no banco e integração entre frontend e backend.  
+
+A automação cobre fluxos essenciais da plataforma — como cadastro, exibição de conteúdo e respostas do servidor — garantindo **qualidade, estabilidade e confiabilidade contínua** da aplicação.  
+
+Para suportar esse ambiente completo, o **Zombie+** integra tecnologias modernas como **Node.js**, **PostgreSQL**, **PgAdmin** e **Docker**, simulando um ecossistema real de desenvolvimento e QA automatizado.
+
 
 ***
 
 
-## 🚀 Tecnologias Utilizadas
+# 🚀 Tecnologias Utilizadas
 
+<div align="center">
 ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black&style=flat)
 ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white&style=flat)
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat)
@@ -18,12 +25,15 @@ O projeto utiliza **Node.js**, **PostgreSQL**, **Docker**, **PgAdmin** e **Playw
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white&style=flat)
 ![Playwright](https://img.shields.io/badge/-Playwright-2EAD33?logo=playwright&logoColor=white&style=flat)
 ![SQL](https://img.shields.io/badge/-SQL-CC2927?logo=databricks&logoColor=white&style=flat)
+![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white&style=flat)
+![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white&style=flat)
+</div>
 
 
 ***
 
 
-## 🧩 Estrutura do Projeto
+# 🧩 Estrutura do Projeto
 
 ## 🧠 Banco de Dados (PgAdmin)
 
@@ -38,22 +48,18 @@ Senha: pwd123
 ```
 O banco de dados foi configurado e gerenciado através do **PgAdmin**, com as tabelas criadas via API e consultas SQL manuais.
 
-**Print - PgAdmin conectado ao banco:**
 <img width="1914" height="947" alt="image" src="https://github.com/user-attachments/assets/0a7173fc-2489-4e22-9b06-b89816c9680f" />
 
 ***
-
 
 ## 💻 Aplicação em Execução
 
 A aplicação web pode ser acessada localmente em:  
 🔗 **http://localhost:3000**
 
-**Print da interface:**
 <img width="1899" height="946" alt="image" src="https://github.com/user-attachments/assets/3216e1dc-4688-479b-811c-8a7b82315f35" />
 
 ***
-
 
 ## 🐳 Executando com Docker
 
