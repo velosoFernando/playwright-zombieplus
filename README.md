@@ -155,8 +155,8 @@ npx playwright show-report
 
 <div align="center">
 
-### **Fernando Veloso**  
-**QA Engineer**
+## Fernando Veloso
+### QA Engineer
 
 <br>
 
