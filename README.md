@@ -4,19 +4,24 @@ Mais que um streaming, uma **experiência arrepiante!**
 O **Zombie+** é uma aplicação full stack inspirada em serviços de streaming, desenvolvida para fins de estudo e automação de testes.  
 O projeto utiliza **Node.js**, **PostgreSQL**, **Docker**, **PgAdmin** e **Playwright** para garantir uma estrutura sólida, moderna e automatizada.
 
----
+***
+
 
 ## 🚀 Tecnologias Utilizadas
 
-- **Frontend:** React + Vite  
-- **Backend:** Node.js com Express  
-- **Banco de Dados:** PostgreSQL  
-- **Gerenciamento de Banco:** PgAdmin  
-- **Containerização:** Docker  
-- **Testes Automatizados:** Playwright  
-- **Linguagem de Query:** SQL  
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black&style=flat)
+![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white&style=flat)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat)
+![Express](https://img.shields.io/badge/-Express-000000?logo=express&logoColor=white&style=flat)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=flat)
+![pgAdmin](https://img.shields.io/badge/-pgAdmin-316192?logo=postgresql&logoColor=white&style=flat)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white&style=flat)
+![Playwright](https://img.shields.io/badge/-Playwright-2EAD33?logo=playwright&logoColor=white&style=flat)
+![SQL](https://img.shields.io/badge/-SQL-CC2927?logo=databricks&logoColor=white&style=flat)
 
----
+
+***
+
 
 ## 🧩 Estrutura do Projeto
 
@@ -36,7 +41,8 @@ O banco de dados foi configurado e gerenciado através do **PgAdmin**, com as ta
 **Print - PgAdmin conectado ao banco:**
 <img width="1914" height="947" alt="image" src="https://github.com/user-attachments/assets/0a7173fc-2489-4e22-9b06-b89816c9680f" />
 
----
+***
+
 
 ## 💻 Aplicação em Execução
 
@@ -46,7 +52,8 @@ A aplicação web pode ser acessada localmente em:
 **Print da interface:**
 <img width="1899" height="946" alt="image" src="https://github.com/user-attachments/assets/3216e1dc-4688-479b-811c-8a7b82315f35" />
 
----
+***
+
 
 ## 🐳 Executando com Docker
 
@@ -98,6 +105,8 @@ Eles garantem o funcionamento correto de fluxos como cadastro de leads, carregam
 🔗 Área de Testes de Regressão:
 Zombie+ Regression Tests
 
+***
+
 ### ⚙️ Instalação do Node.js e Playwright
 
 1. Instalar o Node.js
@@ -130,6 +139,8 @@ npx playwright test
 ```
 npx playwright show-report
 ```
+
+***
 
 🗺️ Roadmap
 
