@@ -38,4 +38,6 @@ test('não deve cadastrar com email incorreto', async ({ page }) => {
 
   await page.getByTestId('modal')
     .getByText('Quero entrar na fila!').click()
+
+  await expect(page.locator('.alert')).toHaveText('Email incorreto')
 });
