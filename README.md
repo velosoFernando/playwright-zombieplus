@@ -16,6 +16,7 @@ Para suportar esse ambiente completo, o **Zombie+** integra tecnologias modernas
 # 🚀 Tecnologias Utilizadas
 
 <div align="center">
+
 ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black&style=flat)
 ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white&style=flat)
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat)
@@ -27,8 +28,8 @@ Para suportar esse ambiente completo, o **Zombie+** integra tecnologias modernas
 ![SQL](https://img.shields.io/badge/-SQL-CC2927?logo=databricks&logoColor=white&style=flat)
 ![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white&style=flat)
 ![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white&style=flat)
-</div>
 
+</div>
 
 ***
 
