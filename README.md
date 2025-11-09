@@ -20,21 +20,21 @@ O projeto utiliza **Node.js**, **PostgreSQL**, **Docker**, **PgAdmin** e **Playw
 
 ## 🧩 Estrutura do Projeto
 
-### 📁 Backend + Frontend (Docker + API)
-![Estrutura Principal](./124d8cf6-71d5-4a6e-8fd9-831caa7d3826.png)
+## 🧠 Banco de Dados (PgAdmin)
 
-### 🧪 Testes Automatizados (Playwright)
-![Estrutura de Testes](./dee7b969-ff68-4ca5-96b9-4323c73451e9.png)
+O banco de dados pode ser acessado localmente através do **PgAdmin**, utilizando o container configurado no Docker.
 
----
+🔗 **http://localhost:16543**
 
-## 🧠 Banco de Dados (PostgreSQL)
-
+🧾 **Credenciais de acesso padrão:**
+```bash
+Email: admin@qax.com
+Senha: pwd123
+```
 O banco de dados foi configurado e gerenciado através do **PgAdmin**, com as tabelas criadas via API e consultas SQL manuais.
 
 **Print - PgAdmin conectado ao banco:**
 <img width="1914" height="947" alt="image" src="https://github.com/user-attachments/assets/0a7173fc-2489-4e22-9b06-b89816c9680f" />
-
 
 ---
 
@@ -45,7 +45,6 @@ A aplicação web pode ser acessada localmente em:
 
 **Print da interface:**
 <img width="1899" height="946" alt="image" src="https://github.com/user-attachments/assets/3216e1dc-4688-479b-811c-8a7b82315f35" />
-
 
 ---
 
@@ -136,8 +135,8 @@ npx playwright show-report
 
 🔗 Zombie+ Roadmap
 
-##👨‍💻 Autor
+## 👨‍💻 Autor
 
-###Fernando Veloso
-####QA Engineer
+### Fernando Veloso
+#### QA Engineer
 💼 Projeto desenvolvido para fins de aprendizado em automação, containers e integração entre frontend, backend e banco de dados.
