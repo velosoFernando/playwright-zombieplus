@@ -152,11 +152,12 @@ npx playwright show-report
 🗺️ Roadmap
 
 🔗 Zombie+ Roadmap
+***
 
 <div align="center">
 
-## Fernando Veloso
-### QA Engineer
+### Fernando Veloso
+#### QA Engineer
 
 <br>
 
