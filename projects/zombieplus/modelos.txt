@@ -30,3 +30,16 @@ Timeout na tela:
 
 Verificar se um elemento está escondido, definindo um timout limite para ele ficar invísivel:
 //await expect(page.locator('.toast')).toBeHidden({timeout: 5000})
+
+Trabalhar com alertas:
+//await expect(page.locator('.alert')).toHaveText('Email incorreto')
+
+Problemas de ambiguidade:
+//await expect(page.locator('.alert')).toHaveText('Campo obrigatório')
+//await expect(page.locator('.alert')).toHaveText('Campo obrigatório')
+
+Solução = Trocar por uma array (lista de textos)
+//await expect(page.locator('.alert')).toHaveText([
+//    'Campo obrigatório',
+//    'Campo obrigatório'
+//  ])
