@@ -1,96 +1,61 @@
 // @ts-check
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
+
+const { LandingPage } = require("./pages/LandingPage");
 
 // cenário 001: processo correto
-test('deve cadastrar um lead na fila de espera', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+test("deve cadastrar um lead na fila de espera", async ({ page }) => {
+  const landingPage = new LandingPage(page);
 
-  await page.getByRole('button', {name: /Aperte o play/}).click()
-
-  await expect(
-    page.getByTestId('modal').getByRole('heading')
-  ).toHaveText('Fila de espera')
-
-  await page.getByPlaceholder('Informe seu nome').fill('Fernando Veloso de Oliveira')
-  await page.getByPlaceholder('Informe seu email').fill('fernandoveloso@gmail.com')
-
-  await page.getByTestId('modal')
-    .getByText('Quero entrar na fila!').click()
-
-  const message = 'Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!'
-  await expect(page.locator('.toast')).toHaveText(message)
-
-  await expect(page.locator('.toast')).toBeHidden({timeout: 5000})
+  await landingPage.visit();
+  await landingPage.openLeadModal();
+  await landingPage.submitLeadForm(
+    "Fernando Veloso",
+    "fernandoveloso@gmail.com"
+  );
+  const message =
+    "Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!";
+  await landingPage.toastHaveText(message);
 });
 
-// cenário 002: alertas 
-test('não deve cadastrar com email incorreto', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+// cenário 002: alertas
+test("não deve cadastrar com email incorreto", async ({ page }) => {
+  const landingPage = new LandingPage(page);
 
-  await page.getByRole('button', {name: /Aperte o play/}).click()
+  await landingPage.visit();
+  await landingPage.openLeadModal();
+  await landingPage.submitLeadForm("Fernando Veloso", "fernando.com.br");
 
-  await expect(
-    page.getByTestId('modal').getByRole('heading')
-  ).toHaveText('Fila de espera')
-
-  await page.getByPlaceholder('Informe seu nome').fill('Fernando Veloso de Oliveira')
-  await page.getByPlaceholder('Informe seu email').fill('fernando.com.br')
-
-  await page.getByTestId('modal')
-    .getByText('Quero entrar na fila!').click()
-
-  await expect(page.locator('.alert')).toHaveText('Email incorreto')
+  await landingPage.alertHaveText("Email incorreto");
 });
 
 // cenário 003: não cadastrar sem campos preenchidos
-test('não deve cadastrar sem nome preenchido', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+test("não deve cadastrar sem nome preenchido", async ({ page }) => {
+  const landingPage = new LandingPage(page);
 
-  await page.getByRole('button', {name: /Aperte o play/}).click()
+  await landingPage.visit();
+  await landingPage.openLeadModal();
+  await landingPage.submitLeadForm("", "fernandoveloso@gmail.com");
 
-  await expect(
-    page.getByTestId('modal').getByRole('heading')
-  ).toHaveText('Fila de espera')
-
-  await page.getByPlaceholder('Informe seu email').fill('fernandoveloso@gmail.com')
-
-  await page.getByTestId('modal')
-    .getByText('Quero entrar na fila!').click()
-
-  await expect(page.locator('.alert')).toHaveText('Campo obrigatório')
+  await landingPage.alertHaveText("Campo obrigatório");
 });
 
-test('não deve cadastrar sem email preenchido', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+test("não deve cadastrar sem email preenchido", async ({ page }) => {
+  const landingPage = new LandingPage(page);
 
-  await page.getByRole('button', {name: /Aperte o play/}).click()
+  await landingPage.visit();
+  await landingPage.openLeadModal();
+  await landingPage.submitLeadForm("Fernando Veloso", "");
 
-  await expect(
-    page.getByTestId('modal').getByRole('heading')
-  ).toHaveText('Fila de espera')
-
-  await page.getByPlaceholder('Informe seu nome').fill('Fernando Veloso de Oliveira')
-
-  await page.getByTestId('modal')
-    .getByText('Quero entrar na fila!').click()
-
-  await expect(page.locator('.alert')).toHaveText('Campo obrigatório')
+  await landingPage.alertHaveText("Campo obrigatório");
 });
 
-test('não deve cadastrar sem campos preenchidos', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+test("não deve cadastrar sem campos preenchidos", async ({ page }) => {
+  const landingPage = new LandingPage(page);
 
-  await page.getByRole('button', {name: /Aperte o play/}).click()
+  await landingPage.visit();
+  await landingPage.openLeadModal();
+  await landingPage.submitLeadForm("", "");
 
-  await expect(
-    page.getByTestId('modal').getByRole('heading')
-  ).toHaveText('Fila de espera')
-
-  await page.getByTestId('modal')
-    .getByText('Quero entrar na fila!').click()
-
-  await expect(page.locator('.alert')).toHaveText([
-    'Campo obrigatório',
-    'Campo obrigatório'
-  ])
+  await landingPage.alertHaveText(["Campo obrigatório", "Campo obrigatório"]);
 });
